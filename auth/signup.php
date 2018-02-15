@@ -14,8 +14,12 @@
   $password = $url["pass"];
   $dbname = substr($url["path"], 1);
 
+  echo $servername;
+  echo $username;
+  echo $password;
+  echo $dbname;
 
-
+/*
 
   $user_name = $_POST["name"];
   $user_email = $_POST["email"];
@@ -52,5 +56,5 @@
   $conn->close();
   setcookie("user", $user_id,time()+7*24*60*60*1000, '/');
   header("Location: ../index.php?p=mypolls");
-  exit;
+  exit; /*
 ?>
