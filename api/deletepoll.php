@@ -2,10 +2,11 @@
 
   $poll_id = $_GET["pollid"];
 
-  $servername = "localhost";
-  $dbuser = "votingapp";
-  $dbpass = "password";
-  $dbname = "voting-app";
+
+  $servername = getenv("DB_SERVER");
+  $username = getenv("DB_USER");
+  $password = getenv("DB_PASS");
+  $dbname = getenv("DB_NAME");
 
   $conn = mysqli_connect($servername,$dbuser,$dbpass,$dbname);
 

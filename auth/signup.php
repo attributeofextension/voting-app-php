@@ -9,17 +9,13 @@
 */
   $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-  $servername = $url["host"];
-  $username = $url["user"];
-  $password = $url["pass"];
-  $dbname = substr($url["path"], 1);
 
-  echo $servername;
-  echo $username;
-  echo $password;
-  echo $dbname;
+  $servername = getenv("DB_SERVER");
+  $username = getenv("DB_USER");
+  $password = getenv("DB_PASS");
+  $dbname = getenv("DB_NAME");
 
-/*
+
 
   $user_name = $_POST["name"];
   $user_email = $_POST["email"];
@@ -56,5 +52,5 @@
   $conn->close();
   setcookie("user", $user_id,time()+7*24*60*60*1000, '/');
   header("Location: ../index.php?p=mypolls");
-  exit; /*
+  exit;
 ?>

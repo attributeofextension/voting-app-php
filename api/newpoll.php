@@ -3,10 +3,11 @@
   $poll_options = $_POST["options"];
   $user_id = $_COOKIE["user"];
 
-  $servername = "localhost";
-  $dbuser = "votingapp";
-  $dbpass = "password";
-  $dbname = "voting-app";
+
+  $servername = getenv("DB_SERVER");
+  $username = getenv("DB_USER");
+  $password = getenv("DB_PASS");
+  $dbname = getenv("DB_NAME");
 
   $conn = new mysqli($servername,$dbuser,$dbpass,$dbname);
 
