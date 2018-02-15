@@ -18,7 +18,7 @@
 
   $user_name = $_POST["name"];
   $user_email = $_POST["email"];
-  $user_password = password_hash($_POST["pw1"],PASSWORD_BCRYPT);
+  $user_password = password_hash($_POST["pw1"],PASSWORD_DEFAULT);
 
   // Create connection
 
