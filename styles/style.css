@@ -1,0 +1,66 @@
+.home-page {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+.new-poll-page {
+  width: 300px;
+  text-align: center;
+  margin:auto;
+  margin-top:20px;
+}
+.new-poll-page input {
+  width: 300px;
+  margin:auto;
+}
+.new-poll-posted {
+  text-align:center;
+}
+.new-poll-btn {
+  width : 300px;
+  margin-top: 10px;
+}
+.showpoll-page{
+  text-align:center;
+  margin:auto;
+  
+}
+.showpoll-page h2 {
+  text-align: center;
+
+}
+.voteBtnPanel {
+  width: 300px;
+}
+.voteBtnPanel label {
+  margin:auto;
+  width: 300px;
+  margin-top: 10px;
+}
+.voteBtnPanel input {
+  width: 300px;
+}
+.voteSubmit {
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+}
+.voteSubmitBtn {
+  width: 300px;
+  margin-top: 20px;
+}
+.voted-page {
+  text-align: center;
+}
+.mypolls-page {
+  width: 500px !important;
+  text-align: center;
+}
+.mypolls-page h3 {
+  text-align: center;
+}
+.mypolls-page li {
+  height: 50px;
+  vertical-align: middle;
+}
