@@ -1,9 +1,21 @@
 <?php
-
+/*
   $servername = "localhost";
   $username = "votingapp";
   $password = "password";
   $dbname = "voting-app";
+
+
+*/
+  $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+  $servername = $url["host"];
+  $username = $url["user"];
+  $password = $url["pass"];
+  $dbname = substr($url["path"], 1);
+
+
+
 
   $user_name = $_POST["name"];
   $user_email = $_POST["email"];
