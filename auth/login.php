@@ -5,6 +5,10 @@
   $password = "password";
   $dbname = "voting-app";
 */
+
+  echo getenv("DB_NAME");
+
+/*
   $servername = getenv("DB_SERVER");
   $username = getenv("DB_USER");
   $password = getenv("DB_PASS");
@@ -40,6 +44,6 @@
     exit;
   }
 
-
+*/
 
 ?>
