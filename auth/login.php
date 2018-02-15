@@ -8,11 +8,11 @@
 
 
   $servername = getenv("DB_SERVER");
-  $username = getenv("DB_USER");
-  $password = getenv("DB_PASS");
+  $dbuser = getenv("DB_USER");
+  $dbpass = getenv("DB_PASS");
   $dbname = getenv("DB_NAME");
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
+  $conn = mysqli_connect($servername,$dbuser,$dbpass,$dbname);
 
   $user_email = $_POST["email"];
   $user_password = $_POST["pw1"];

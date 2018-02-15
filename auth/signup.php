@@ -7,23 +7,22 @@
 
 
 */
-  $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
+ // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
   $servername = getenv("DB_SERVER");
-  $username = getenv("DB_USER");
-  $password = getenv("DB_PASS");
+  $dbuser = getenv("DB_USER");
+  $dbpass = getenv("DB_PASS");
   $dbname = getenv("DB_NAME");
 
-
+  $conn = mysqli_connect($servername,$dbuser,$dbpass,$dbname);
 
   $user_name = $_POST["name"];
   $user_email = $_POST["email"];
   $user_password = password_hash($_POST["pw1"],PASSWORD_BCRYPT);
 
   // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
 
+  echo mysqli_error($conn);
   // Check connection
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

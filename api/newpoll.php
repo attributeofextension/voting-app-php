@@ -5,11 +5,11 @@
 
 
   $servername = getenv("DB_SERVER");
-  $username = getenv("DB_USER");
-  $password = getenv("DB_PASS");
+  $dbuser = getenv("DB_USER");
+  $dbpass = getenv("DB_PASS");
   $dbname = getenv("DB_NAME");
 
-  $conn = new mysqli($servername,$dbuser,$dbpass,$dbname);
+  $conn = mysqli_connect($servername,$dbuser,$dbpass,$dbname);
 
   $insertPollQry = "INSERT INTO polls(`name`,`userid`) VALUES ('".$poll_name."','".$user_id."')";
   $poll_id = -1;
